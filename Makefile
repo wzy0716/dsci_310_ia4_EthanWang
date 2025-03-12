@@ -3,14 +3,12 @@
 
 all: results/horse_pop_plot_largest_sd.png \
 	results/horse_pops_plot.png \
-	results/horses_spread.csv \
+	results/horses_sd.csv \
 	reports/qmd_example.html \
 	reports/qmd_example.pdf
 
-
-
 # generate figures and objects for report
-results/horse_pop_plot_largest_sd.png results/horse_pops_plot.png results/horses_spread.csv: source/generate_figures.R
+results/horse_pop_plot_largest_sd.png results/horse_pops_plot.png results/horses_sd.csv: source/generate_figures.R data/00030067-eng.csv
 	Rscript source/generate_figures.R --input_dir="data/00030067-eng.csv" \
 		--out_dir="results"
 
@@ -23,7 +21,8 @@ reports/qmd_example.pdf: results reports/qmd_example.qmd
 
 # clean
 clean:
-	rm -rf results
+	rm -rf results/*
 	rm -rf reports/qmd_example.html \
 		reports/qmd_example.pdf \
 		reports/qmd_example_files
+
