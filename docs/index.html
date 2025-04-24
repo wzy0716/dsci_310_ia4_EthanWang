@@ -44,16 +44,25 @@ div.csl-indent {
 }</style>
 
 
-<script src="qmd_example_files/libs/clipboard/clipboard.min.js"></script>
-<script src="qmd_example_files/libs/quarto-html/quarto.js"></script>
-<script src="qmd_example_files/libs/quarto-html/popper.min.js"></script>
-<script src="qmd_example_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="qmd_example_files/libs/quarto-html/anchor.min.js"></script>
-<link href="qmd_example_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="qmd_example_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="qmd_example_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="qmd_example_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="qmd_example_files/libs/bootstrap/bootstrap-973236bd072d72a04ee9cd82dcc9cb29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-81e35ebdb4125010edbabe6010586085.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -85,12 +94,53 @@ window.Quarto = {
 };
 </script>
 
+<meta name="citation_title" content="DSCI 310: Historical Horse Population in Canada">
+<meta name="citation_author" content="Tiffany Timbers &amp;amp; Jordan Bourak">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=R: A language and environment for statistical computing;,citation_author=R Core Team;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_fulltext_html_url=https://www.R-project.org/;">
+<meta name="citation_reference" content="citation_title=Historical horse population in canada;,citation_author=Tiffany Timbers;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://github.com/ttimbers/equine_numbers_value_canada_parameters;">
+<meta name="citation_reference" content="citation_title=Quarto;,citation_author=J. J. Allaire;,citation_author=Charles Teague;,citation_author=Carlos Scheidegger;,citation_author=Yihui Xie;,citation_author=Christophe Dervieux;,citation_publication_date=2022-01;,citation_cover_date=2022-01;,citation_year=2022;,citation_fulltext_html_url=https://github.com/quarto-dev/quarto-cli;,citation_doi=10.5281/zenodo.5960048;">
+<meta name="citation_reference" content="citation_title=Tidyverse: Easily install and load the ’tidyverse’;,citation_author=Hadley Wickham;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://CRAN.R-project.org/package=tidyverse;">
+<meta name="citation_reference" content="citation_title=Knitr: A comprehensive tool for reproducible research in R;,citation_author=Yihui Xie;,citation_editor=Victoria Stodden;,citation_editor=Friedrich Leisch;,citation_editor=Roger D. Peng;,citation_publication_date=2014;,citation_cover_date=2014;,citation_year=2014;,citation_fulltext_html_url=http://www.crcpress.com/product/isbn/9781466561595;,citation_inbook_title=Implementing reproducible computational research;">
+<meta name="citation_reference" content="citation_title=Horses, number on farms at june 1 and at december 1;,citation_author=Government of Canada;,citation_publication_date=2017-04-18;,citation_cover_date=2017-04-18;,citation_year=2017;,citation_fulltext_html_url=https://open.canada.ca/data/en/dataset/a3ecf553-8ec4-4551-a0fe-8df1472c6cf7;,citation_publisher=Open Government - Open Data;">
+<meta name="citation_reference" content="citation_title=Horses, number on farms at june 1, farm value per head and total farm value;,citation_author=Government of Canada;,citation_publication_date=2017-04-18;,citation_cover_date=2017-04-18;,citation_year=2017;,citation_fulltext_html_url=https://open.canada.ca/data/en/dataset/e175ef9c-98f0-49b3-8131-ca0e3895a0cb;,citation_publisher=Open Government - Open Data;">
 </head>
 
 <body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">DSCI 310: Historical Horse Population in Canada</h1>
+          </div>
+
+    
+    <div class="quarto-title-meta-container">
+      <div class="quarto-title-meta-column-start">
+        
+        <div class="quarto-title-meta">
+
+                <div>
+            <div class="quarto-title-meta-heading">Author</div>
+            <div class="quarto-title-meta-contents">
+                        <p>Tiffany Timbers &amp; Jordan Bourak </p>
+                      </div>
+          </div>
+                
+          
+                
+              </div>
+      </div>
+      <div class="quarto-title-meta-column-end quarto-other-formats-target">
+      </div>
+    </div>
+
+
+
+    <div class="quarto-other-links-text-target">
+    </div>  </div>
+</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
@@ -101,33 +151,15 @@ window.Quarto = {
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">0.4</span> Results</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">0.5</span> References</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="qmd_example.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
 </div>
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">DSCI 310: Historical Horse Population in Canada</h1>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Tiffany Timbers &amp; Jordan Bourak </p>
-          </div>
-  </div>
-    
   
-    
-  </div>
-  
-
-
-</header>
 
 
 <section id="aim" class="level3" data-number="0.1">
@@ -148,7 +180,7 @@ window.Quarto = {
 <div id="fig-horse-pop" class="quarto-float quarto-figure quarto-figure-center anchored" width="70%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-horse-pop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../results/horse_pops_plot.png" id="fig-horse-pop" class="img-fluid figure-img" style="width:70.0%">
+<a href="results/horse_pops_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: "><img src="results/horse_pops_plot.png" id="fig-horse-pop" class="img-fluid figure-img" style="width:70.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-horse-pop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1
@@ -220,7 +252,7 @@ Table&nbsp;1
 <div id="fig-largest-sd" class="quarto-float quarto-figure quarto-figure-center anchored" width="60%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-largest-sd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../results/horse_pop_plot_largest_sd.png" id="fig-largest-sd" class="img-fluid figure-img" style="width:60.0%">
+<a href="results/horse_pop_plot_largest_sd.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: "><img src="results/horse_pop_plot_largest_sd.png" id="fig-largest-sd" class="img-fluid figure-img" style="width:60.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-largest-sd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2
@@ -677,6 +709,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

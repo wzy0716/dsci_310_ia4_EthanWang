@@ -5,7 +5,7 @@
 all: clean results/horse_pop_plot_largest_sd.png \
 	results/horse_pops_plot.png \
 	results/horses_sd.csv \
-	docs/qmd_example.html
+	docs/index.html
 
 # generate figures and objects for report
 results/horse_pop_plot_largest_sd.png results/horse_pops_plot.png results/horses_sd.csv: source/generate_figures.R data/00030067-eng.csv
@@ -13,14 +13,13 @@ results/horse_pop_plot_largest_sd.png results/horse_pops_plot.png results/horses
 		--out_dir="results"
 
 # render quarto report in HTML and PDF
-docs/qmd_example.html: results reports/qmd_example.qmd
-	quarto render reports/qmd_example.qmd --to html --output-dir docs
+docs/index.html: index.qmd
+	quarto render index.qmd --to html --output-dir docs
 	touch docs/.nojekyll
 
 # clean
 clean:
 	rm -rf results/*
-	rm -rf reports/qmd_example.html \
+	rm -rf index.html \
 		reports/qmd_example.pdf \
 		reports/qmd_example_files
-
