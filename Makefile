@@ -1,25 +1,31 @@
-# author: Jordan Bourak & Tiffany Timbers
-# date: 2021-11-22
 .PHONY: all clean
 
-all: clean results/horse_pop_plot_largest_sd.png \
+all: clean \
+	results/horse_pop_plot_largest_sd.png \
 	results/horse_pops_plot.png \
 	results/horses_sd.csv \
+	docs/horse_pop_plot_largest_sd.png \
+	docs/horse_pops_plot.png \
 	docs/index.html
 
-# generate figures and objects for report
+# Step 1: Generate figures and CSV
 results/horse_pop_plot_largest_sd.png results/horse_pops_plot.png results/horses_sd.csv: source/generate_figures.R data/00030067-eng.csv
-	Rscript source/generate_figures.R --input_dir="data/00030067-eng.csv" \
-		--out_dir="results"
+	Rscript source/generate_figures.R --input_dir="data/00030067-eng.csv" --out_dir="results"
 
-# render quarto report in HTML and PDF
-docs/index.html: index.qmd
+# Step 2: Copy figures explicitly to docs
+docs/horse_pop_plot_largest_sd.png: results/horse_pop_plot_largest_sd.png
+	cp $< $@
+
+docs/horse_pops_plot.png: results/horse_pops_plot.png
+	cp $< $@
+
+# Step 3: Render Quarto report
+docs/index.html: index.qmd docs/horse_pop_plot_largest_sd.png docs/horse_pops_plot.png
 	quarto render index.qmd --to html --output-dir docs
 	touch docs/.nojekyll
 
-# clean
+# Clean generated files
 clean:
 	rm -rf results/*
-	rm -rf index.html \
-		reports/qmd_example.pdf \
-		reports/qmd_example_files
+	rm -rf docs/*.png docs/*.html docs/.nojekyll
+	rm -rf index.html reports/qmd_example.pdf reports/qmd_example_files
