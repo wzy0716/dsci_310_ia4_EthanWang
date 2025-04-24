@@ -8,10 +8,6 @@ format:
     toc: true
     toc-depth: 3
     number-sections: true
-  pdf:
-    toc: true
-    toc-depth: 3
-    number-sections: true
 editor: source
 markdown: 
   wrap: 72

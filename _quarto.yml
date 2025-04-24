@@ -1,2 +1,13 @@
+project:
+  type: manuscript
+  output-dir: docs
 
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    comments:
+      hypothesis: true
+  docx: default
   
